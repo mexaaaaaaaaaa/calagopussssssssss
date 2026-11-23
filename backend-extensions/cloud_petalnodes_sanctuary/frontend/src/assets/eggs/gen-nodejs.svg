@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360">
+  <defs>
+    <linearGradient id="bg-gen-nodejs" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#14241A"/>
+      <stop offset="100%" stop-color="#295236"/>
+    </linearGradient>
+    <radialGradient id="glow-gen-nodejs" cx="50%" cy="42%" r="55%">
+      <stop offset="0%" stop-color="#BDF2BC" stop-opacity="0.32"/>
+      <stop offset="100%" stop-color="#14241A" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid-gen-nodejs" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#ffffff" stroke-opacity="0.04" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="640" height="360" fill="url(#bg-gen-nodejs)"/>
+  <rect width="640" height="360" fill="url(#grid-gen-nodejs)"/>
+  <rect width="640" height="360" fill="url(#glow-gen-nodejs)"/>
+  
+        <polygon points="320,76 410,128 410,232 320,284 230,232 230,128" fill="#7BD87A" fill-opacity="0.22" stroke="#7BD87A" stroke-width="3.5"/>
+        <polygon points="320,122 370,151 370,209 320,238 270,209 270,151" fill="#BDF2BC" fill-opacity="0.32" stroke="#BDF2BC" stroke-width="2.5"/>
+</svg>

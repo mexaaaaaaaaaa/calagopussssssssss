@@ -1,0 +1,495 @@
+/* Calagopus Extension Stylesheet Chunk: cloud.petalnodes.sanctuary v2.1.0 */
+/* NOTE: Calagopus main.tsx imports extension CSS *before* core @/app.css.
+   Every token & component selector below scopes with :root[data-petalnodes-theme]
+   so Petalnodes rules deterministically win CSS specificity in both light and dark modes
+   without fragile !important spam, while cleanly disabling if attribute is absent. */
+
+:root,
+:root[data-petalnodes-theme],
+:root[data-mantine-color-scheme='light'],
+:root[data-petalnodes-theme][data-mantine-color-scheme='light'] {
+  color-scheme: light;
+  --calagopus-primary: #f4a6c1;
+  --calagopus-primary-hover: #ea8cae;
+  --calagopus-primary-active: #e0789f;
+  --calagopus-primary-soft: #fce7ef;
+  --calagopus-primary-subtle: #fff5f8;
+  --calagopus-primary-text: #8e2e52;
+  --calagopus-primary-border: #f7bdd2;
+  --calagopus-bg: #fff8fa;
+  --calagopus-surface: #ffffff;
+  --calagopus-surface-secondary: #fcfafb;
+  --calagopus-surface-subtle: #fcfafb;
+  --calagopus-surface-elevated: #fff5f8;
+  --calagopus-text: #29232a;
+  --calagopus-text-secondary: #68616b;
+  --calagopus-border: #eee5e9;
+  --calagopus-border-strong: #deced5;
+  --calagopus-success: #65a879;
+  --calagopus-success-bg: #eff7f1;
+  --calagopus-success-text: #275d38;
+  --calagopus-success-border: #cbe4d2;
+  --calagopus-warning: #e7ad55;
+  --calagopus-warning-bg: #fdf7eb;
+  --calagopus-warning-text: #7a4e0b;
+  --calagopus-warning-border: #f3dcad;
+  --calagopus-danger: #dc6b78;
+  --calagopus-danger-bg: #fdf1f2;
+  --calagopus-danger-text: #942b38;
+  --calagopus-danger-border: #f3c6cb;
+  --calagopus-shadow-card: 0 1px 2px rgba(41, 35, 42, 0.04), 0 4px 16px rgba(244, 166, 193, 0.08);
+  --calagopus-shadow-popover: 0 12px 32px rgba(41, 35, 42, 0.1), 0 4px 12px rgba(244, 166, 193, 0.14);
+  --calagopus-dot-color: rgba(222, 206, 213, 0.52);
+  --calagopus-font-display: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --calagopus-font-body: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --calagopus-font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+  --font-sans: var(--calagopus-font-body);
+  --chart-grid-color: #eee5e9;
+  --chart-tick-color: #68616b;
+  --chart-series-1-border: #f4a6c1;
+  --chart-series-1-fill: rgba(244, 166, 193, 0.24);
+  --mantine-color-body: #fff8fa;
+  --mantine-color-text: #29232a;
+  --mantine-color-dimmed: #68616b;
+  --mantine-color-default: #ffffff;
+  --mantine-color-default-hover: #fff5f8;
+  --mantine-color-default-border: #eee5e9;
+  --mantine-primary-color-filled: #f4a6c1;
+  --mantine-primary-color-filled-hover: #ea8cae;
+  --mantine-primary-color-light: #fce7ef;
+  --mantine-primary-color-light-color: #8e2e52;
+  --background: var(--calagopus-bg);
+  --foreground: var(--calagopus-text);
+  --card: var(--calagopus-surface);
+  --card-foreground: var(--calagopus-text);
+  --popover: var(--calagopus-surface);
+  --popover-foreground: var(--calagopus-text);
+  --primary: var(--calagopus-primary);
+  --primary-foreground: #29232a;
+  --secondary: var(--calagopus-surface-secondary);
+  --secondary-foreground: var(--calagopus-text);
+  --muted: var(--calagopus-surface-secondary);
+  --muted-foreground: var(--calagopus-text-secondary);
+  --accent: var(--calagopus-primary-soft);
+  --accent-foreground: var(--calagopus-primary-text);
+  --destructive: var(--calagopus-danger);
+  --destructive-foreground: #ffffff;
+  --border: var(--calagopus-border);
+  --input: var(--calagopus-border);
+  --ring: var(--calagopus-primary);
+  --radius: 0.75rem;
+}
+
+:root.dark,
+:root[data-mantine-color-scheme='dark'],
+:root[data-petalnodes-theme].dark,
+:root[data-petalnodes-theme][data-mantine-color-scheme='dark'] {
+  color-scheme: dark;
+  --calagopus-primary: #f4a6c1;
+  --calagopus-primary-hover: #f7bdd2;
+  --calagopus-primary-active: #ea8cae;
+  --calagopus-primary-soft: rgba(244, 166, 193, 0.16);
+  --calagopus-primary-subtle: rgba(244, 166, 193, 0.09);
+  --calagopus-primary-text: #f9c6d8;
+  --calagopus-primary-border: rgba(244, 166, 193, 0.34);
+  --calagopus-bg: #111116;
+  --calagopus-surface: #1a1a23;
+  --calagopus-surface-secondary: #21212c;
+  --calagopus-surface-subtle: #1e1d27;
+  --calagopus-surface-elevated: #272330;
+  --calagopus-text: #f7f2f5;
+  --calagopus-text-secondary: #b2aab5;
+  --calagopus-border: #2c2b38;
+  --calagopus-border-strong: #3e3a4d;
+  --calagopus-success: #6ec488;
+  --calagopus-success-bg: rgba(110, 196, 136, 0.14);
+  --calagopus-success-text: #9ee0b2;
+  --calagopus-success-border: rgba(110, 196, 136, 0.32);
+  --calagopus-warning: #f0b865;
+  --calagopus-warning-bg: rgba(240, 184, 101, 0.14);
+  --calagopus-warning-text: #f9d193;
+  --calagopus-warning-border: rgba(240, 184, 101, 0.32);
+  --calagopus-danger: #ec7e8a;
+  --calagopus-danger-bg: rgba(236, 126, 138, 0.14);
+  --calagopus-danger-text: #f9b3bb;
+  --calagopus-danger-border: rgba(236, 126, 138, 0.34);
+  --calagopus-shadow-card: 0 2px 6px rgba(0, 0, 0, 0.36), 0 6px 20px rgba(0, 0, 0, 0.24);
+  --calagopus-shadow-popover: 0 12px 32px rgba(0, 0, 0, 0.56);
+  --calagopus-dot-color: rgba(178, 170, 181, 0.14);
+  --font-sans: var(--calagopus-font-body);
+  --chart-grid-color: #2c2b38;
+  --chart-tick-color: #b2aab5;
+  --mantine-color-body: #111116;
+  --mantine-color-text: #f7f2f5;
+  --mantine-color-dimmed: #b2aab5;
+  --mantine-color-default: #1a1a23;
+  --mantine-color-default-hover: #21212c;
+  --mantine-color-default-border: #2c2b38;
+  --mantine-primary-color-filled: #f4a6c1;
+  --mantine-primary-color-filled-hover: #f7bdd2;
+  --mantine-primary-color-light: rgba(244, 166, 193, 0.16);
+  --mantine-primary-color-light-color: #f9c6d8;
+  --background: var(--calagopus-bg);
+  --foreground: var(--calagopus-text);
+  --card: var(--calagopus-surface);
+  --card-foreground: var(--calagopus-text);
+  --popover: var(--calagopus-surface);
+  --popover-foreground: var(--calagopus-text);
+  --primary: var(--calagopus-primary);
+  --primary-foreground: #29232a;
+  --secondary: var(--calagopus-surface-secondary);
+  --secondary-foreground: var(--calagopus-text);
+  --muted: var(--calagopus-surface-secondary);
+  --muted-foreground: var(--calagopus-text-secondary);
+  --accent: var(--calagopus-primary-soft);
+  --accent-foreground: var(--calagopus-primary-text);
+  --destructive: var(--calagopus-danger);
+  --destructive-foreground: #111116;
+  --border: var(--calagopus-border);
+  --input: var(--calagopus-border);
+  --ring: var(--calagopus-primary);
+  --radius: 0.75rem;
+}
+
+html,
+body,
+:root[data-petalnodes-theme] body {
+  background-color: var(--calagopus-bg);
+  color: var(--calagopus-text);
+  font-family: var(--calagopus-font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+.font-display,
+:root[data-petalnodes-theme] .mantine-Title-root {
+  font-family: var(--calagopus-font-display);
+  text-wrap: balance;
+}
+
+:root[data-petalnodes-theme] .font-mono,
+:root[data-petalnodes-theme] code,
+:root[data-petalnodes-theme] pre,
+:root[data-petalnodes-theme] kbd {
+  font-family: var(--calagopus-font-mono);
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+:root[data-petalnodes-theme] ::selection {
+  background-color: var(--calagopus-primary-soft);
+  color: var(--calagopus-primary-text);
+}
+
+/* Lightweight compositor-safe interaction utility */
+.blush-transition {
+  transition-property: border-color, opacity, box-shadow, transform;
+  transition-duration: 150ms;
+  transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.blush-page-enter {
+  animation: blush-fade-rise 180ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes blush-fade-rise {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Consistent accessible focus indicator */
+.blush-focus-ring:focus-visible {
+  outline: 2px solid var(--calagopus-primary);
+  outline-offset: 2px;
+}
+
+/* Calagopus & Mantine core component skinning scoped under [data-petalnodes-theme] */
+:root[data-petalnodes-theme] .mantine-Card-root {
+  background-color: var(--calagopus-surface);
+  border-color: var(--calagopus-border);
+  box-shadow: var(--calagopus-shadow-card);
+  color: var(--calagopus-text);
+}
+
+:root[data-petalnodes-theme] .petal-surface-card {
+  background-color: var(--calagopus-surface);
+  border: 1px solid var(--calagopus-border);
+  box-shadow: var(--calagopus-shadow-card);
+  border-radius: 1rem;
+  transition: border-color 150ms ease, box-shadow 150ms ease, transform 150ms ease;
+}
+
+:root[data-petalnodes-theme] .petal-surface-card[data-hoverable='true']:hover {
+  border-color: var(--calagopus-primary-border);
+  box-shadow: 0 8px 24px rgba(244, 166, 193, 0.14);
+}
+
+:root[data-petalnodes-theme] #title-card-header {
+  background: linear-gradient(135deg, var(--calagopus-surface) 0%, var(--calagopus-surface-elevated) 100%);
+  border-bottom: 1px solid var(--calagopus-border);
+}
+
+:root[data-petalnodes-theme] #title-card-icon {
+  background-color: var(--calagopus-primary-soft);
+  color: var(--calagopus-primary-text);
+  border: 1px solid var(--calagopus-primary-border);
+  border-radius: 0.5rem;
+}
+
+:root[data-petalnodes-theme] #sidebar-desktop.petal-liquid-glass,
+:root[data-petalnodes-theme] .petal-glass-drawer .mantine-Drawer-content {
+  border-color: var(--calagopus-primary-border);
+}
+
+:root[data-petalnodes-theme] .petal-glass-header {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(18px) saturate(160%);
+  -webkit-backdrop-filter: blur(18px) saturate(160%);
+  border-bottom: 1px solid var(--calagopus-border);
+}
+
+:root[data-petalnodes-theme][data-mantine-color-scheme='dark'] .petal-glass-header {
+  background: rgba(26, 26, 35, 0.8);
+}
+
+:root[data-petalnodes-theme] .mantine-Tabs-list {
+  border-bottom-color: var(--calagopus-border);
+  gap: 0.25rem;
+}
+
+:root[data-petalnodes-theme] .mantine-Tabs-tab {
+  border-radius: 0.65rem 0.65rem 0 0;
+  color: var(--calagopus-text-secondary);
+  font-weight: 500;
+  transition: background-color 140ms ease, color 140ms ease;
+}
+
+:root[data-petalnodes-theme] .mantine-Tabs-tab:hover {
+  background-color: var(--calagopus-primary-subtle);
+  color: var(--calagopus-text);
+}
+
+:root[data-petalnodes-theme] .mantine-Tabs-tab[data-active='true'] {
+  color: var(--calagopus-primary-text);
+  background-color: var(--calagopus-primary-subtle);
+  border-color: var(--calagopus-primary);
+  font-weight: 600;
+}
+
+:root[data-petalnodes-theme] .mantine-Table-table {
+  border-color: var(--calagopus-border);
+}
+
+:root[data-petalnodes-theme] .mantine-Table-thead {
+  background-color: var(--calagopus-surface-secondary);
+}
+
+:root[data-petalnodes-theme] .mantine-Table-th {
+  color: var(--calagopus-text-secondary);
+  font-size: 0.75rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--calagopus-border);
+}
+
+:root[data-petalnodes-theme] .mantine-Table-tr {
+  border-bottom-color: var(--calagopus-border);
+}
+
+:root[data-petalnodes-theme] .mantine-Table-tr:hover {
+  background-color: var(--calagopus-primary-subtle);
+}
+
+:root[data-petalnodes-theme] .mantine-Button-root[data-variant='filled'] {
+  background-color: var(--calagopus-primary);
+  color: #29232a;
+  font-weight: 600;
+  border: 1px solid var(--calagopus-primary-border);
+}
+
+:root[data-petalnodes-theme] .mantine-Button-root[data-variant='filled']:hover:not(:disabled) {
+  background-color: var(--calagopus-primary-hover);
+}
+
+:root[data-petalnodes-theme] .mantine-Button-root[data-variant='outline'] {
+  border-color: var(--calagopus-border-strong);
+  color: var(--calagopus-text);
+}
+
+:root[data-petalnodes-theme] .mantine-Button-root[data-variant='outline']:hover:not(:disabled) {
+  border-color: var(--calagopus-primary-border);
+  background-color: var(--calagopus-primary-subtle);
+}
+
+/* Mantine input & surface alignment with semantic light/dark tokens */
+.mantine-Input-input {
+  background-color: var(--calagopus-surface);
+  border-color: var(--calagopus-border);
+  color: var(--calagopus-text);
+  transition: border-color 150ms ease, box-shadow 150ms ease;
+}
+
+.mantine-Input-input:hover:not(:disabled) {
+  border-color: var(--calagopus-border-strong);
+}
+
+.mantine-Input-input:focus,
+.mantine-Input-input:focus-within {
+  border-color: var(--calagopus-primary);
+  box-shadow: 0 0 0 3px rgba(244, 166, 193, 0.28);
+}
+
+.mantine-Input-input[data-error='true'] {
+  border-color: var(--calagopus-danger);
+}
+
+.mantine-Input-input[data-error='true']:focus,
+.mantine-Input-input[data-error='true']:focus-within {
+  box-shadow: 0 0 0 3px rgba(220, 107, 120, 0.22);
+}
+
+.mantine-Modal-content,
+.mantine-Drawer-content,
+.mantine-Menu-dropdown,
+.mantine-Select-dropdown,
+.mantine-Popover-dropdown {
+  background-color: var(--calagopus-surface);
+  color: var(--calagopus-text);
+  border: 1px solid var(--calagopus-border);
+  box-shadow: var(--calagopus-shadow-popover);
+}
+
+.mantine-Select-option,
+.mantine-Menu-item {
+  color: var(--calagopus-text);
+}
+
+.mantine-Select-option[data-selected='true'],
+.mantine-Select-option[data-hovered='true'],
+.mantine-Menu-item[data-hovered='true'] {
+  background-color: var(--calagopus-primary-subtle);
+  color: var(--calagopus-text);
+}
+
+.mantine-Tooltip-tooltip {
+  background-color: #29232a;
+  color: #fff8fa;
+  border: 1px solid rgba(244, 166, 193, 0.25);
+  font-size: 12px;
+  font-weight: 500;
+  padding: 5px 10px;
+}
+
+.mantine-Notification-root {
+  background-color: var(--calagopus-surface);
+  color: var(--calagopus-text);
+  border: 1px solid var(--calagopus-border);
+  box-shadow: var(--calagopus-shadow-popover);
+}
+
+/* Console xterm & code editor framing inside Petalnodes Sanctuary */
+:root[data-petalnodes-theme] .xterm {
+  border-radius: 0.75rem;
+  padding: 0.5rem;
+}
+
+:root[data-petalnodes-theme] .monaco-editor {
+  border-radius: 0.75rem;
+  overflow: hidden;
+  border: 1px solid var(--calagopus-border);
+}
+
+/* Ambient Petalnodes paper texture + faint dot grid */
+.petal-dot-grid {
+  background-image: radial-gradient(var(--calagopus-dot-color) 1px, transparent 1px);
+  background-size: 24px 24px;
+  background-position: 0 0;
+}
+
+.petal-paper-grain {
+  opacity: 0.04;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)' opacity='1'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+}
+
+.petal-floater {
+  position: absolute;
+  top: -32px;
+  will-change: transform;
+  animation: petal-drift var(--petal-duration, 18s) linear var(--petal-delay, 0s) infinite;
+}
+
+.petal-ambient-root.is-paused .petal-floater {
+  animation-play-state: paused;
+}
+
+@keyframes petal-drift {
+  0% {
+    transform: translate3d(0, -40px, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate3d(var(--petal-sway, 18px), 52vh, 0) rotate(165deg);
+  }
+  100% {
+    transform: translate3d(calc(var(--petal-sway, 18px) * -0.5), 108vh, 0) rotate(340deg);
+  }
+}
+
+/* Strict prefers-reduced-motion compliance */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .petal-drift-layer {
+    display: none !important;
+  }
+}
+
+/* Liquid Glass Sidebar Material (supports Safari/Chromium + CSS backdrop fallback) */
+.petal-liquid-glass {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(20px) saturate(165%);
+  -webkit-backdrop-filter: blur(20px) saturate(165%);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.72),
+    4px 0 24px rgba(41, 35, 42, 0.05);
+}
+
+:root.dark .petal-liquid-glass,
+:root[data-mantine-color-scheme='dark'] .petal-liquid-glass {
+  background: rgba(26, 26, 35, 0.8);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.06),
+    4px 0 28px rgba(0, 0, 0, 0.36);
+}
+
+.petal-liquid-pill {
+  background: linear-gradient(135deg, rgba(252, 231, 239, 0.94), rgba(244, 166, 193, 0.26));
+  border: 1px solid var(--calagopus-primary-border);
+  box-shadow: 0 2px 12px rgba(244, 166, 193, 0.22);
+}
+
+:root.dark .petal-liquid-pill,
+:root[data-mantine-color-scheme='dark'] .petal-liquid-pill {
+  background: linear-gradient(135deg, rgba(244, 166, 193, 0.2), rgba(244, 166, 193, 0.08));
+  border: 1px solid rgba(244, 166, 193, 0.36);
+  box-shadow: 0 2px 16px rgba(244, 166, 193, 0.16);
+}

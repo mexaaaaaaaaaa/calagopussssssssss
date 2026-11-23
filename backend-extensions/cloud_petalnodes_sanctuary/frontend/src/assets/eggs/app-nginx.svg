@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360">
+  <defs>
+    <linearGradient id="bg-app-nginx" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#12261E"/>
+      <stop offset="100%" stop-color="#22523E"/>
+    </linearGradient>
+    <radialGradient id="glow-app-nginx" cx="50%" cy="42%" r="55%">
+      <stop offset="0%" stop-color="#A9F0C8" stop-opacity="0.32"/>
+      <stop offset="100%" stop-color="#12261E" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid-app-nginx" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#ffffff" stroke-opacity="0.04" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="640" height="360" fill="url(#bg-app-nginx)"/>
+  <rect width="640" height="360" fill="url(#grid-app-nginx)"/>
+  <rect width="640" height="360" fill="url(#glow-app-nginx)"/>
+  
+        <polygon points="320,76 410,128 410,232 320,284 230,232 230,128" fill="#5CD692" fill-opacity="0.22" stroke="#5CD692" stroke-width="3.5"/>
+        <polygon points="320,122 370,151 370,209 320,238 270,209 270,151" fill="#A9F0C8" fill-opacity="0.32" stroke="#A9F0C8" stroke-width="2.5"/>
+</svg>

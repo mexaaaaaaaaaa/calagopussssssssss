@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360">
+  <defs>
+    <linearGradient id="bg-game-terraria" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#16253A"/>
+      <stop offset="100%" stop-color="#2C4D6E"/>
+    </linearGradient>
+    <radialGradient id="glow-game-terraria" cx="50%" cy="42%" r="55%">
+      <stop offset="0%" stop-color="#E88EF2" stop-opacity="0.32"/>
+      <stop offset="100%" stop-color="#16253A" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid-game-terraria" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#ffffff" stroke-opacity="0.04" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="640" height="360" fill="url(#bg-game-terraria)"/>
+  <rect width="640" height="360" fill="url(#grid-game-terraria)"/>
+  <rect width="640" height="360" fill="url(#glow-game-terraria)"/>
+  
+        <polygon points="220,275 256,120 296,275" fill="#6CE08A" fill-opacity="0.7"/>
+        <polygon points="295,275 338,76 382,275" fill="#E88EF2" fill-opacity="0.82"/>
+        <polygon points="376,275 415,140 452,275" fill="#6CE08A" fill-opacity="0.6"/>
+        <path d="M120 276 H520" stroke="#6CE08A" stroke-width="2.5"/>
+</svg>

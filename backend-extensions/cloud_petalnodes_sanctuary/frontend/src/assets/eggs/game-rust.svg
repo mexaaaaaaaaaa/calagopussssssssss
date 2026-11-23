@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360">
+  <defs>
+    <linearGradient id="bg-game-rust" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#291716"/>
+      <stop offset="100%" stop-color="#5E2E26"/>
+    </linearGradient>
+    <radialGradient id="glow-game-rust" cx="50%" cy="42%" r="55%">
+      <stop offset="0%" stop-color="#F4A88E" stop-opacity="0.32"/>
+      <stop offset="100%" stop-color="#291716" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid-game-rust" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#ffffff" stroke-opacity="0.04" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="640" height="360" fill="url(#bg-game-rust)"/>
+  <rect width="640" height="360" fill="url(#grid-game-rust)"/>
+  <rect width="640" height="360" fill="url(#glow-game-rust)"/>
+  
+        <path d="M160 272 A160 140 0 0 1 480 272 Z" fill="#E86A4A" fill-opacity="0.22" stroke="#E86A4A" stroke-width="2.5"/>
+        <path d="M220 272 A100 90 0 0 1 420 272" fill="none" stroke="#F4A88E" stroke-width="2" stroke-dasharray="10 8"/>
+        <rect x="296" y="90" width="48" height="182" rx="6" fill="#2A1615" stroke="#E86A4A" stroke-width="2"/>
+        <circle cx="320" cy="128" r="14" fill="#E86A4A"/>
+</svg>

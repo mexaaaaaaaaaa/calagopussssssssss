@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360">
+  <defs>
+    <linearGradient id="bg-gen-java" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#281C16"/>
+      <stop offset="100%" stop-color="#5E3B29"/>
+    </linearGradient>
+    <radialGradient id="glow-gen-java" cx="50%" cy="42%" r="55%">
+      <stop offset="0%" stop-color="#86B8F2" stop-opacity="0.32"/>
+      <stop offset="100%" stop-color="#281C16" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid-gen-java" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#ffffff" stroke-opacity="0.04" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="640" height="360" fill="url(#bg-gen-java)"/>
+  <rect width="640" height="360" fill="url(#grid-gen-java)"/>
+  <rect width="640" height="360" fill="url(#glow-gen-java)"/>
+  
+        <rect x="242" y="150" width="156" height="96" rx="22" fill="#F09459" fill-opacity="0.25" stroke="#F09459" stroke-width="3"/>
+        <path d="M398 172 H422 A18 18 0 0 1 422 214 H398" fill="none" stroke="#F09459" stroke-width="3"/>
+        <path d="M286 130 Q274 106 292 84 M322 128 Q310 100 328 76 M358 130 Q346 106 364 84" stroke="#86B8F2" stroke-width="4" stroke-linecap="round" fill="none"/>
+</svg>

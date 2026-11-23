@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "experimentalDecorators": true,
+    "useDefineForClassFields": false,
+    "module": "ESNext",
+    "types": ["vite/client", "vite-plugin-pwa/client"],
+    "lib": [
+      "ES2022",
+      "DOM",
+      "DOM.Iterable"
+    ],
+    "skipLibCheck": true,
+    "moduleResolution": "bundler",
+    "isolatedModules": true,
+    "moduleDetection": "force",
+    "allowJs": true,
+    "jsx": "react-jsx",
+    "paths": {
+      "@/*": [
+        "./*"
+      ],
+      "shared": [
+        "./backend-extensions/cloud_petalnodes_sanctuary/frontend/src/shared-adapter.ts"
+      ]
+    },
+    "allowImportingTsExtensions": true,
+    "noEmit": true
+  },
+  "exclude": [
+    "dist",
+    "backend-extensions/cloud_petalnodes_sanctuary/frontend/src/index.tsx",
+    "backend-extensions/cloud_petalnodes_sanctuary/frontend/src/overrides.ts",
+    "backend-extensions/cloud_petalnodes_sanctuary/frontend/src/overrides/*.tsx"
+  ]
+}

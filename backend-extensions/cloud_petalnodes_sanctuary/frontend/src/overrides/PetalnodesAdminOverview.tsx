@@ -1,0 +1,355 @@
+import {
+  faArchive,
+  faArrowRightLong,
+  faBan,
+  faChartBar,
+  faCheck,
+  faCircleInfo,
+  faCircleQuestion,
+  faComputer,
+  faCrow,
+  faDatabase,
+  faEarth,
+  faEgg,
+  faMemory,
+  faMicrochip,
+  faPuzzlePiece,
+  faScroll,
+  faServer,
+  faStethoscope,
+  faUsers,
+  IconDefinition,
+} from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Fragment } from 'react';
+import { NavLink } from 'react-router';
+import getBackupStats from '@/api/admin/stats/getBackupStats.ts';
+import getGeneralStats from '@/api/admin/stats/getGeneralStats.ts';
+import getOverview, { AdminSystemOverview } from '@/api/admin/system/getOverview.ts';
+import { AdminCan } from '@/elements/Can.tsx';
+import StatCard from '@/elements/data-display/StatCard.tsx';
+import TitleCard from '@/elements/data-display/TitleCard.tsx';
+import ExtensionSlot from '@/elements/ExtensionSlot.tsx';
+import ResourceView from '@/elements/ResourceView.tsx';
+import Text from '@/elements/typography/Text.tsx';
+import { bytesToString } from '@/lib/format/size.ts';
+import { formatNanoseconds } from '@/lib/format/time.ts';
+import { percentString } from '@/lib/format/usage.ts';
+import { queryKeys } from '@/lib/queryKeys.ts';
+import BackupStatsPanel from '@/pages/admin/backup-configurations/BackupStatsPanel.tsx';
+import ExtensionBuildFailedAlert from '@/pages/admin/home/ExtensionBuildFailedAlert.tsx';
+import OrigAdminOverview from '@/pages/admin/home/overview/AdminOverview.tsx';
+import PanelUpdateAlert from '@/pages/admin/home/PanelUpdateAlert.tsx';
+import { useResource } from '@/plugins/resource/useResource.ts';
+import { useAdminCan } from '@/plugins/usePermissions.ts';
+import { useTranslations } from '@/providers/TranslationProvider.tsx';
+import { PetalnodesLogo } from '../components/PetalnodesLogo';
+
+function isPetalnodesActive(): boolean {
+  return typeof document === 'undefined' || document.documentElement.hasAttribute('data-petalnodes-theme');
+}
+
+function ThemedAdminOverview() {
+  const { t } = useTranslations();
+  const canReadStats = useAdminCan('stats.read');
+
+  const systemOverview = useResource({
+    queryKey: queryKeys.admin.system.overview(),
+    queryFn: getOverview,
+    enabled: canReadStats,
+  });
+
+  const generalStats = useResource({
+    queryKey: queryKeys.admin.stats.general(),
+    queryFn: getGeneralStats,
+    enabled: canReadStats,
+  });
+
+  const backupStats = useResource({
+    queryKey: queryKeys.admin.stats.backups(),
+    queryFn: getBackupStats,
+    enabled: canReadStats,
+  });
+
+  const containerTypeMeta = (type: AdminSystemOverview['containerType']): { label: string; icon: IconDefinition } => {
+    switch (type) {
+      case 'unknown':
+        return { label: t('common.unknown', {}), icon: faCircleQuestion };
+      case 'none':
+        return { label: t('pages.admin.home.tabs.overview.page.enum.containerType.none', {}), icon: faBan };
+      case 'official':
+        return { label: t('pages.admin.home.tabs.overview.page.enum.containerType.official', {}), icon: faCheck };
+      case 'official_aio':
+        return { label: t('pages.admin.home.tabs.overview.page.enum.containerType.officialAio', {}), icon: faCheck };
+      case 'official_heavy':
+        return { label: t('pages.admin.home.tabs.overview.page.enum.containerType.officialHeavy', {}), icon: faCheck };
+      case 'official_heavy_aio':
+        return {
+          label: t('pages.admin.home.tabs.overview.page.enum.containerType.officialHeavyAio', {}),
+          icon: faCheck,
+        };
+      default:
+        return { label: t('common.unknown', {}), icon: faCircleQuestion };
+    }
+  };
+
+  return (
+    <>
+      <section className='mb-4 rounded-2xl border border-(--calagopus-primary-border) bg-linear-to-r from-(--calagopus-surface) via-(--calagopus-surface) to-(--calagopus-primary-subtle) p-4 sm:p-5 shadow-[var(--calagopus-shadow-card)]'>
+        <div className='flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between'>
+          <div className='flex items-center gap-3 min-w-0'>
+            <PetalnodesLogo size='lg' />
+            <div className='min-w-0'>
+              <h2 className='font-display text-base sm:text-lg font-bold tracking-tight text-(--calagopus-text)'>
+                Petalnodes Sanctuary Control Plane
+              </h2>
+              <p className='text-xs text-(--calagopus-text-secondary)'>
+                System telemetry, node health, backup utilization, and extension status across your Calagopus deployment.
+              </p>
+            </div>
+          </div>
+          <div className='flex flex-wrap items-center gap-2 shrink-0'>
+            <NavLink
+              to='/admin/extensions'
+              className='blush-transition inline-flex items-center gap-1.5 rounded-xl border border-(--calagopus-primary-border) bg-(--calagopus-primary-soft) px-3 py-1.5 text-xs font-semibold text-(--calagopus-primary-text) hover:bg-(--calagopus-primary-subtle)'
+            >
+              <FontAwesomeIcon icon={faPuzzlePiece} className='text-[11px]' />
+              <span>Extensions</span>
+            </NavLink>
+            <NavLink
+              to='/admin/nodes'
+              className='blush-transition inline-flex items-center gap-1.5 rounded-xl border border-(--calagopus-border) bg-(--calagopus-surface) px-3 py-1.5 text-xs font-medium text-(--calagopus-text) hover:border-(--calagopus-primary-border)'
+            >
+              <FontAwesomeIcon icon={faServer} className='text-[11px] text-(--calagopus-primary-text)' />
+              <span>Nodes</span>
+            </NavLink>
+          </div>
+        </div>
+      </section>
+
+      <PanelUpdateAlert />
+      <ExtensionBuildFailedAlert />
+
+      <ExtensionSlot
+        components={window.extensionContext.extensionRegistry.pages.admin.home.overview.cards.prependedComponents}
+        name='overview-prepended'
+      />
+
+      <AdminCan
+        action='stats.read'
+        renderOnCant={
+          <Text>
+            {t('pages.admin.home.tabs.overview.page.permissionDenied', {})} <FontAwesomeIcon icon={faArrowRightLong} />{' '}
+            <FontAwesomeIcon icon={faCrow} />
+          </Text>
+        }
+      >
+        <TitleCard title={t('pages.admin.home.tabs.overview.page.card.systemOverview', {})} icon={faStethoscope}>
+          <ResourceView resource={systemOverview}>
+            {(overview) => {
+              const container = containerTypeMeta(overview.containerType);
+              const breakdown = [
+                {
+                  label: t('pages.admin.home.tabs.overview.page.system.cacheBreakdown.localHits', {}),
+                  bucket: overview.cache.localHits,
+                },
+                {
+                  label: t('pages.admin.home.tabs.overview.page.system.cacheBreakdown.remoteHits', {}),
+                  bucket: overview.cache.remoteHits,
+                },
+                {
+                  label: t('pages.admin.home.tabs.overview.page.system.cacheBreakdown.coalescedWaits', {}),
+                  bucket: overview.cache.coalescedWaits,
+                },
+                {
+                  label: t('pages.admin.home.tabs.overview.page.system.cacheBreakdown.misses', {}),
+                  bucket: {
+                    calls: overview.cache.totalMisses,
+                    averageLatencyNs: overview.cache.averageMissLatencyNs,
+                  },
+                },
+              ];
+
+              const averageLatency = (calls: number, latencyNs: number) =>
+                calls === 0
+                  ? null
+                  : t('pages.admin.home.tabs.overview.page.system.cacheAverageLatency', {
+                      latency: formatNanoseconds(latencyNs),
+                    });
+
+              return (
+                <>
+                  <div className='grid grid-cols-2 xl:grid-cols-4 gap-4'>
+                    <StatCard
+                      className='col-span-2'
+                      icon={faMicrochip}
+                      value={overview.cpu.brand}
+                      label={t('common.stat.cpu', {})}
+                    />
+                    <StatCard
+                      className='col-span-2'
+                      icon={faMemory}
+                      value={t('pages.admin.home.tabs.overview.page.system.memoryValue', {
+                        used: bytesToString(overview.memory.usedBytes),
+                        total: bytesToString(overview.memory.totalBytes),
+                        percent: percentString(overview.memory.usedBytes, overview.memory.totalBytes),
+                      })}
+                      label={t('pages.admin.home.tabs.overview.page.system.memoryUsage', {
+                        process: bytesToString(overview.memory.usedBytesProcess),
+                      })}
+                    />
+                  </div>
+                  <div className='grid md:grid-cols-2 xl:grid-cols-4 gap-4 mt-4'>
+                    <StatCard
+                      icon={faServer}
+                      value={overview.kernelVersion}
+                      label={t('pages.admin.home.tabs.overview.page.system.kernelVersion', {
+                        architecture: overview.architecture,
+                      })}
+                    />
+                    <StatCard
+                      icon={container.icon}
+                      value={container.label}
+                      label={t('pages.admin.home.tabs.overview.page.system.containerType', {})}
+                    />
+                    <StatCard
+                      icon={faDatabase}
+                      value={`PostgreSQL ${overview.database.version}`}
+                      label={t('pages.admin.home.tabs.overview.page.system.databaseVersion', {
+                        size: bytesToString(overview.database.sizeBytes),
+                      })}
+                    />
+                    <StatCard
+                      icon={faDatabase}
+                      value={overview.cache.version}
+                      label={t('pages.admin.home.tabs.overview.page.system.cacheVersion', {})}
+                    />
+                  </div>
+                  <div className='grid md:grid-cols-2 xl:grid-cols-4 gap-4 mt-4'>
+                    <StatCard
+                      value={overview.cache.totalCalls.toString()}
+                      label={t('pages.admin.home.tabs.overview.page.system.cacheCalls', {})}
+                      popoverIcon={faCircleInfo}
+                      popover={
+                        <div className='grid grid-cols-[1fr_auto_auto] gap-x-4'>
+                          <Text size='sm' fw={700}>
+                            {t('pages.admin.home.tabs.overview.page.system.cacheBreakdown.title', {})}
+                          </Text>
+                          <Text size='sm' fw={700} ta='right'>
+                            {t('pages.admin.home.tabs.overview.page.system.cacheBreakdown.calls', {})}
+                          </Text>
+                          <Text size='sm' fw={700} ta='right'>
+                            {t('pages.admin.home.tabs.overview.page.system.cacheBreakdown.averageLatency', {})}
+                          </Text>
+                          {breakdown.map((row) => (
+                            <Fragment key={row.label}>
+                              <Text size='sm' c='dimmed'>
+                                {row.label}
+                              </Text>
+                              <Text size='sm' ta='right'>
+                                {row.bucket.calls.toString()}
+                              </Text>
+                              <Text size='sm' ta='right'>
+                                {row.bucket.calls === 0 ? '' : formatNanoseconds(row.bucket.averageLatencyNs)}
+                              </Text>
+                            </Fragment>
+                          ))}
+                        </div>
+                      }
+                    />
+                    <StatCard
+                      value={overview.cache.totalHits.toString()}
+                      label={t('pages.admin.home.tabs.overview.page.system.cacheHits', {
+                        percent: percentString(overview.cache.totalHits, overview.cache.totalCalls),
+                      })}
+                      details={averageLatency(overview.cache.totalHits, overview.cache.averageHitLatencyNs)}
+                    />
+                    <StatCard
+                      value={overview.cache.totalMisses.toString()}
+                      label={t('pages.admin.home.tabs.overview.page.system.cacheMisses', {
+                        percent: percentString(overview.cache.totalMisses, overview.cache.totalCalls),
+                      })}
+                      details={averageLatency(overview.cache.totalMisses, overview.cache.averageMissLatencyNs)}
+                    />
+                    <StatCard
+                      value={formatNanoseconds(overview.cache.maxCallLatencyNs)}
+                      label={t('pages.admin.home.tabs.overview.page.system.slowestCachedCall', {})}
+                    />
+                  </div>
+                </>
+              );
+            }}
+          </ResourceView>
+        </TitleCard>
+
+        <TitleCard
+          title={t('pages.admin.home.tabs.overview.page.card.generalStatistics', {})}
+          icon={faChartBar}
+          className='mt-4'
+        >
+          <ResourceView resource={generalStats}>
+            {(stats) => {
+              const items: { icon: IconDefinition; value: number; label: string }[] = [
+                { icon: faUsers, value: stats.users, label: t('pages.admin.home.tabs.overview.page.stats.users', {}) },
+                {
+                  icon: faComputer,
+                  value: stats.servers,
+                  label: t('pages.admin.home.tabs.overview.page.stats.servers', {}),
+                },
+                {
+                  icon: faEarth,
+                  value: stats.locations,
+                  label: t('pages.admin.home.tabs.overview.page.stats.locations', {}),
+                },
+                { icon: faServer, value: stats.nodes, label: t('pages.admin.home.tabs.overview.page.stats.nodes', {}) },
+                {
+                  icon: faEgg,
+                  value: stats.nestEggs,
+                  label: t('pages.admin.home.tabs.overview.page.stats.nestEggs', {}),
+                },
+                {
+                  icon: faDatabase,
+                  value: stats.databaseHosts,
+                  label: t('pages.admin.home.tabs.overview.page.stats.databaseHosts', {}),
+                },
+                {
+                  icon: faArchive,
+                  value: stats.backupConfigurations,
+                  label: t('pages.admin.home.tabs.overview.page.stats.backupConfigurations', {}),
+                },
+                { icon: faScroll, value: stats.roles, label: t('pages.admin.home.tabs.overview.page.stats.roles', {}) },
+              ];
+              return (
+                <div className='grid md:grid-cols-2 xl:grid-cols-4 gap-4'>
+                  {items.map((item) => (
+                    <StatCard key={item.label} icon={item.icon} value={item.value.toString()} label={item.label} />
+                  ))}
+                </div>
+              );
+            }}
+          </ResourceView>
+        </TitleCard>
+
+        <TitleCard
+          title={t('pages.admin.home.tabs.overview.page.card.backupStatistics', {})}
+          icon={faArchive}
+          className='mt-4'
+        >
+          <ResourceView resource={backupStats}>{(stats) => <BackupStatsPanel stats={stats} />}</ResourceView>
+        </TitleCard>
+      </AdminCan>
+
+      <ExtensionSlot
+        components={window.extensionContext.extensionRegistry.pages.admin.home.overview.cards.appendedComponents}
+        name='overview-appended'
+      />
+    </>
+  );
+}
+
+export default function PetalnodesAdminOverview() {
+  if (!isPetalnodesActive()) {
+    return <OrigAdminOverview />;
+  }
+  return <ThemedAdminOverview />;
+}

@@ -1,0 +1,12 @@
+[package]
+name = "cloud_petalnodes_sanctuary"
+version = "2.1.0"
+edition = { workspace = true }
+authors = ["Petalnodes"]
+description = "Petalnodes Sanctuary (Liquid Glass + Blush UI) custom theme extension crate for Calagopus Panel."
+license = "MIT"
+
+[dependencies]
+shared = { workspace = true }
+async-trait = { workspace = true }
+tracing = { workspace = true }

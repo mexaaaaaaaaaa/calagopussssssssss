@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360">
+  <defs>
+    <linearGradient id="bg-app-code-server" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#151924"/>
+      <stop offset="100%" stop-color="#26344D"/>
+    </linearGradient>
+    <radialGradient id="glow-app-code-server" cx="50%" cy="42%" r="55%">
+      <stop offset="0%" stop-color="#F4A6C1" stop-opacity="0.32"/>
+      <stop offset="100%" stop-color="#151924" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid-app-code-server" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#ffffff" stroke-opacity="0.04" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="640" height="360" fill="url(#bg-app-code-server)"/>
+  <rect width="640" height="360" fill="url(#grid-app-code-server)"/>
+  <rect width="640" height="360" fill="url(#glow-app-code-server)"/>
+  
+        <rect x="168" y="88" width="304" height="184" rx="12" fill="#131924" stroke="#62B6F5" stroke-width="2.5"/>
+        <circle cx="194" cy="112" r="5" fill="#F2728C"/>
+        <circle cx="212" cy="112" r="5" fill="#F2C86B"/>
+        <circle cx="230" cy="112" r="5" fill="#6BE09E"/>
+        <path d="M240 165 L208 192 L240 218 M400 165 L432 192 L400 218 M332 152 L308 232" stroke="#F4A6C1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+</svg>

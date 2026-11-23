@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360">
+  <defs>
+    <linearGradient id="bg-fallback" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1B1822"/>
+      <stop offset="100%" stop-color="#3B2B3F"/>
+    </linearGradient>
+    <radialGradient id="glow-fallback" cx="50%" cy="42%" r="55%">
+      <stop offset="0%" stop-color="#FCE7EF" stop-opacity="0.32"/>
+      <stop offset="100%" stop-color="#1B1822" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid-fallback" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#ffffff" stroke-opacity="0.04" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="640" height="360" fill="url(#bg-fallback)"/>
+  <rect width="640" height="360" fill="url(#grid-fallback)"/>
+  <rect width="640" height="360" fill="url(#glow-fallback)"/>
+  
+        <path d="M320 92 C360 132 384 172 384 208 C384 244 355 270 320 270 C285 270 256 244 256 208 C256 172 280 132 320 92 Z" fill="#F4A6C1" fill-opacity="0.32" stroke="#F4A6C1" stroke-width="3"/>
+        <circle cx="320" cy="206" r="24" fill="#FCE7EF"/>
+</svg>

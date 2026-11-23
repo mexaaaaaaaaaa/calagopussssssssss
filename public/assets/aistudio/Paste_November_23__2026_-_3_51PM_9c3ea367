@@ -1,0 +1,392 @@
+[supervisor] an earlier build left the repo partial, resetting it before building
+detected cargo: cargo 1.100.0 (3acc79c0c 2026-11-05)
+detected node:  24.22.3
+detected pnpm:  11.28.13
+successfully resynced internal extension list.
+recalculating dependencies...
+Scope: all 2 workspace projects
+Already up to date
+Done in 1s using pnpm v11.28.13
+successfully removed 0 extensions.
+detected pnpm:  11.28.13
+detected node:  24.22.3
+successfully resynced internal extension list.
+successfully added McTools
+make sure to run panel-rs extensions apply to apply its changes
+detected pnpm:  11.28.13
+detected node:  24.22.3
+successfully resynced internal extension list.
+successfully added Server Properties
+make sure to run panel-rs extensions apply to apply its changes
+detected pnpm:  11.28.13
+detected node:  24.22.3
+extension has database migrations...
+0 migrations found:
+
+extracted migrations to database/extension-migrations/dev_calagopus_aiassistant
+successfully resynced internal extension list.
+successfully added AI Assistant
+make sure to run panel-rs extensions apply to apply its changes
+detected pnpm:  11.28.13
+detected node:  24.22.3
+extension has database migrations...
+5 migrations found:
+- 20260923115648_gdrive_connections
+- 20260923115653_gdrive_pushes
+- 20260924090000_gdrive_connection_health
+- 20260924170000_gdrive_restore_tokens
+- 20261018180000_gdrive_user_retention
+
+extracted migrations to database/extension-migrations/dev_caloptreyx_gdrive
+successfully resynced internal extension list.
+successfully added Google Drive Backups
+make sure to run panel-rs extensions apply to apply its changes
+detected pnpm:  11.28.13
+detected node:  24.22.3
+extension has database migrations...
+1 migrations found:
+- 20260925120000_copy_settings_from_nebula
+
+extracted migrations to database/extension-migrations/dev_caloptreyx_mint
+successfully resynced internal extension list.
+successfully added Mint Theme
+make sure to run panel-rs extensions apply to apply its changes
+detected pnpm:  11.28.13
+detected node:  24.22.3
+successfully resynced internal extension list.
+successfully added Zoron Theme
+make sure to run panel-rs extensions apply to apply its changes
+detected pnpm:  11.28.13
+detected node:  24.22.3
+successfully resynced internal extension list.
+successfully added Minecraft Player Manager
+make sure to run panel-rs extensions apply to apply its changes
+detected pnpm:  11.28.13
+detected node:  24.22.3
+extension has database migrations...
+1 migrations found:
+- 20261007000000_initial
+
+extracted migrations to database/extension-migrations/dev_minerpl_caddyproxy
+successfully resynced internal extension list.
+successfully added Caddy
+make sure to run panel-rs extensions apply to apply its changes
+detected pnpm:  11.28.13
+detected node:  24.22.3
+successfully resynced internal extension list.
+successfully added Qunix Theme
+make sure to run panel-rs extensions apply to apply its changes
+detected pnpm:  11.28.13
+detected node:  24.22.3
+successfully resynced internal extension list.
+successfully added Content Installer
+make sure to run panel-rs extensions apply to apply its changes
+detected pnpm:  11.28.13
+detected node:  24.22.3
+extension has database migrations...
+1 migrations found:
+- 20260401000000_create_mcvc_installs
+
+extracted migrations to database/extension-migrations/gg_ir77_mcversionchooser
+successfully resynced internal extension list.
+successfully added MC Version Chooser
+make sure to run panel-rs extensions apply to apply its changes
+detected pnpm:  11.28.13
+detected node:  24.22.3
+successfully resynced internal extension list.
+successfully added Petalnodes Theme
+make sure to run panel-rs extensions apply to apply its changes
+detected pnpm:  11.28.13
+detected node:  24.22.3
+successfully resynced internal extension list.
+successfully added Amber Theme
+make sure to run panel-rs extensions apply to apply its changes
+successfully resynced internal extension list.
+detected cargo: cargo 1.100.0 (3acc79c0c 2026-11-05)
+detected node:  24.22.3
+detected pnpm:  11.28.13
+
+┏━━━━━━━━━━━━━━━━━━━┓
+┃ building frontend ┃
+┗━━━━━━━━━━━━━━━━━━━┛
+installing dependencies...
+Scope: all 28 workspace projects
+✓ Lockfile passes supply-chain policies (verified 4m ago)
+Progress: resolved 1, reused 0, downloaded 0, added 0
+Progress: resolved 104, reused 101, downloaded 0, added 0
+Progress: resolved 351, reused 263, downloaded 3, added 0
+Progress: resolved 665, reused 504, downloaded 3, added 0
+Packages: +15
++++++++++++++++
+Progress: resolved 665, reused 504, downloaded 3, added 13, done
+[WARN] Issues with peer dependencies found. Run "pnpm peers check" to list them.
+
+Done in 6.2s using pnpm v11.28.13
+
+building frontend...
+$ pnpm build
+$ pnpm build:translations && vite build
+$ tsx build-translations.mts
+vite v8.3.6 building client environment for production...
+transforming...
+[plugin calagopus:deprecated-paths] "@/elements/Button.tsx" is a deprecated path and will be removed in a future release. Import from "@/elements/buttons/Button.tsx" instead.
+[plugin calagopus:deprecated-paths] "@/elements/Stack.tsx" is a deprecated path and will be removed in a future release. Import from "@/elements/layout/Stack.tsx" instead.
+[plugin calagopus:deprecated-paths] "@/elements/SegmentedControl.tsx" is a deprecated path and will be removed in a future release. Import from "@/elements/layout/SegmentedControl.tsx" instead.
+[plugin calagopus:deprecated-paths] "@/elements/Group.tsx" is a deprecated path and will be removed in a future release. Import from "@/elements/layout/Group.tsx" instead.
+[plugin calagopus:deprecated-paths] "@/elements/Title.tsx" is a deprecated path and will be removed in a future release. Import from "@/elements/typography/Title.tsx" instead.
+[plugin calagopus:deprecated-paths] "@/elements/Text.tsx" is a deprecated path and will be removed in a future release. Import from "@/elements/typography/Text.tsx" instead.
+[plugin calagopus:deprecated-paths] "@/elements/Alert.tsx" is a deprecated path and will be removed in a future release. Import from "@/elements/feedback/Alert.tsx" instead.
+[plugin calagopus:deprecated-paths] "@/elements/Card.tsx" is a deprecated path and will be removed in a future release. Import from "@/elements/data-display/Card.tsx" instead.
+[plugin calagopus:deprecated-paths] "@/elements/Badge.tsx" is a deprecated path and will be removed in a future release. Import from "@/elements/data-display/Badge.tsx" instead.
+[38;5;147m[LARGE_BARREL_MODULES] [0mnode_modules/.pnpm/@tabler+icons-react@3.50.0_react@19.3.1/node_modules/@tabler/icons-react/dist/esm/tabler-icons-react.mjs has 6260 re-exports. Eagerly resolving every entry can significantly slow down the build. Consider using `@rolldown/plugin-transform-imports` to rewrite imports at the source level so the barrel file is never loaded.
+ [38;5;240m │[0m 
+ [38;5;240m │[0m [38;5;115mHelp[0m: See https://github.com/rolldown/plugins/tree/main/packages/transform-imports for usage.
+
+✓ 8220 modules transformed.
+rendering chunks...
+✗ Build failed in 22.34s
+[translations] Build error for "ar": Error: ENOENT: no such file or directory, open '/app/repo/frontend/dist/translations/ar.json'
+    at Object.writeFileSync (node:fs:2482:20)
+    at PluginContextImpl.closeBundle (file:///app/repo/frontend/node_modules/.vite-temp/vite.config.ts.timestamp-1795429264293-641a7348cb7e48.mjs:830:8)
+    at PluginContextImpl.handler (file:///app/repo/frontend/node_modules/.pnpm/vite@8.3.6_@types+node@26.6.6_esbuild@0.28.2_jiti@2.7.0_tsx@4.23.15_yaml@2.9.1/node_modules/vite/dist/node/chunks/node.js:35023:13)
+    at plugin (file:///app/repo/frontend/node_modules/.pnpm/rolldown@1.2.16/node_modules/rolldown/dist/shared/bindingify-input-options-CM8bmcLg.mjs:1941:17)
+    at plugin.<computed> (file:///app/repo/frontend/node_modules/.pnpm/rolldown@1.2.16/node_modules/rolldown/dist/shared/bindingify-input-options-CM8bmcLg.mjs:2343:18) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/app/repo/frontend/dist/translations/ar.json'
+}
+[translations] Build error for "cs": Error: ENOENT: no such file or directory, open '/app/repo/frontend/dist/translations/cs.json'
+    at Object.writeFileSync (node:fs:2482:20)
+    at PluginContextImpl.closeBundle (file:///app/repo/frontend/node_modules/.vite-temp/vite.config.ts.timestamp-1795429264293-641a7348cb7e48.mjs:830:8)
+    at PluginContextImpl.handler (file:///app/repo/frontend/node_modules/.pnpm/vite@8.3.6_@types+node@26.6.6_esbuild@0.28.2_jiti@2.7.0_tsx@4.23.15_yaml@2.9.1/node_modules/vite/dist/node/chunks/node.js:35023:13)
+    at plugin (file:///app/repo/frontend/node_modules/.pnpm/rolldown@1.2.16/node_modules/rolldown/dist/shared/bindingify-input-options-CM8bmcLg.mjs:1941:17)
+    at plugin.<computed> (file:///app/repo/frontend/node_modules/.pnpm/rolldown@1.2.16/node_modules/rolldown/dist/shared/bindingify-input-options-CM8bmcLg.mjs:2343:18) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/app/repo/frontend/dist/translations/cs.json'
+}
+[translations] Build error for "da": Error: ENOENT: no such file or directory, open '/app/repo/frontend/dist/translations/da.json'
+    at Object.writeFileSync (node:fs:2482:20)
+    at PluginContextImpl.closeBundle (file:///app/repo/frontend/node_modules/.vite-temp/vite.config.ts.timestamp-1795429264293-641a7348cb7e48.mjs:830:8)
+    at PluginContextImpl.handler (file:///app/repo/frontend/node_modules/.pnpm/vite@8.3.6_@types+node@26.6.6_esbuild@0.28.2_jiti@2.7.0_tsx@4.23.15_yaml@2.9.1/node_modules/vite/dist/node/chunks/node.js:35023:13)
+    at plugin (file:///app/repo/frontend/node_modules/.pnpm/rolldown@1.2.16/node_modules/rolldown/dist/shared/bindingify-input-options-CM8bmcLg.mjs:1941:17)
+    at plugin.<computed> (file:///app/repo/frontend/node_modules/.pnpm/rolldown@1.2.16/node_modules/rolldown/dist/shared/bindingify-input-options-CM8bmcLg.mjs:2343:18) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/app/repo/frontend/dist/translations/da.json'
+}
+[translations] Build error for "de": Error: ENOENT: no such file or directory, open '/app/repo/frontend/dist/translations/de.json'
+    at Object.writeFileSync (node:fs:2482:20)
+    at PluginContextImpl.closeBundle (file:///app/repo/frontend/node_modules/.vite-temp/vite.config.ts.timestamp-1795429264293-641a7348cb7e48.mjs:830:8)
+    at PluginContextImpl.handler (file:///app/repo/frontend/node_modules/.pnpm/vite@8.3.6_@types+node@26.6.6_esbuild@0.28.2_jiti@2.7.0_tsx@4.23.15_yaml@2.9.1/node_modules/vite/dist/node/chunks/node.js:35023:13)
+    at plugin (file:///app/repo/frontend/node_modules/.pnpm/rolldown@1.2.16/node_modules/rolldown/dist/shared/bindingify-input-options-CM8bmcLg.mjs:1941:17)
+    at plugin.<computed> (file:///app/repo/frontend/node_modules/.pnpm/rolldown@1.2.16/node_modules/rolldown/dist/shared/bindingify-input-options-CM8bmcLg.mjs:2343:18) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/app/repo/frontend/dist/translations/de.json'
+}
+[translations] Build error for "en": Error: ENOENT: no such file or directory, open '/app/repo/frontend/dist/translations/en.json'
+    at Object.writeFileSync (node:fs:2482:20)
+    at PluginContextImpl.closeBundle (file:///app/repo/frontend/node_modules/.vite-temp/vite.config.ts.timestamp-1795429264293-641a7348cb7e48.mjs:830:8)
+    at PluginContextImpl.handler (file:///app/repo/frontend/node_modules/.pnpm/vite@8.3.6_@types+node@26.6.6_esbuild@0.28.2_jiti@2.7.0_tsx@4.23.15_yaml@2.9.1/node_modules/vite/dist/node/chunks/node.js:35023:13)
+    at plugin (file:///app/repo/frontend/node_modules/.pnpm/rolldown@1.2.16/node_modules/rolldown/dist/shared/bindingify-input-options-CM8bmcLg.mjs:1941:17)
+    at plugin.<computed> (file:///app/repo/frontend/node_modules/.pnpm/rolldown@1.2.16/node_modules/rolldown/dist/shared/bindingify-input-options-CM8bmcLg.mjs:2343:18) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/app/repo/frontend/dist/translations/en.json'
+}
+[translations] Build error for "es": Error: ENOENT: no such file or directory, open '/app/repo/frontend/dist/translations/es.json'
+    at Object.writeFileSync (node:fs:2482:20)
+    at PluginContextImpl.closeBundle (file:///app/repo/frontend/node_modules/.vite-temp/vite.config.ts.timestamp-1795429264293-641a7348cb7e48.mjs:830:8)
+    at PluginContextImpl.handler (file:///app/repo/frontend/node_modules/.pnpm/vite@8.3.6_@types+node@26.6.6_esbuild@0.28.2_jiti@2.7.0_tsx@4.23.15_yaml@2.9.1/node_modules/vite/dist/node/chunks/node.js:35023:13)
+    at plugin (file:///app/repo/frontend/node_modules/.pnpm/rolldown@1.2.16/node_modules/rolldown/dist/shared/bindingify-input-options-CM8bmcLg.mjs:1941:17)
+    at plugin.<computed> (file:///app/repo/frontend/node_modules/.pnpm/rolldown@1.2.16/node_modules/rolldown/dist/shared/bindingify-input-options-CM8bmcLg.mjs:2343:18) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/app/repo/frontend/dist/translations/es.json'
+}
+[translations] Build error for "fr": Error: ENOENT: no such file or directory, open '/app/repo/frontend/dist/translations/fr.json'
+    at Object.writeFileSync (node:fs:2482:20)
+    at PluginContextImpl.closeBundle (file:///app/repo/frontend/node_modules/.vite-temp/vite.config.ts.timestamp-1795429264293-641a7348cb7e48.mjs:830:8)
+    at PluginContextImpl.handler (file:///app/repo/frontend/node_modules/.pnpm/vite@8.3.6_@types+node@26.6.6_esbuild@0.28.2_jiti@2.7.0_tsx@4.23.15_yaml@2.9.1/node_modules/vite/dist/node/chunks/node.js:35023:13)
+    at plugin (file:///app/repo/frontend/node_modules/.pnpm/rolldown@1.2.16/node_modules/rolldown/dist/shared/bindingify-input-options-CM8bmcLg.mjs:1941:17)
+    at plugin.<computed> (file:///app/repo/frontend/node_modules/.pnpm/rolldown@1.2.16/node_modules/rolldown/dist/shared/bindingify-input-options-CM8bmcLg.mjs:2343:18) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/app/repo/frontend/dist/translations/fr.json'
+}
+[translations] Build error for "hu": Error: ENOENT: no such file or directory, open '/app/repo/frontend/dist/translations/hu.json'
+    at Object.writeFileSync (node:fs:2482:20)
+    at PluginContextImpl.closeBundle (file:///app/repo/frontend/node_modules/.vite-temp/vite.config.ts.timestamp-1795429264293-641a7348cb7e48.mjs:830:8)
+    at PluginContextImpl.handler (file:///app/repo/frontend/node_modules/.pnpm/vite@8.3.6_@types+node@26.6.6_esbuild@0.28.2_jiti@2.7.0_tsx@4.23.15_yaml@2.9.1/node_modules/vite/dist/node/chunks/node.js:35023:13)
+    at plugin (file:///app/repo/frontend/node_modules/.pnpm/rolldown@1.2.16/node_modules/rolldown/dist/shared/bindingify-input-options-CM8bmcLg.mjs:1941:17)
+    at plugin.<computed> (file:///app/repo/frontend/node_modules/.pnpm/rolldown@1.2.16/node_modules/rolldown/dist/shared/bindingify-input-options-CM8bmcLg.mjs:2343:18) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/app/repo/frontend/dist/translations/hu.json'
+}
+[translations] Build error for "it": Error: ENOENT: no such file or directory, open '/app/repo/frontend/dist/translations/it.json'
+    at Object.writeFileSync (node:fs:2482:20)
+    at PluginContextImpl.closeBundle (file:///app/repo/frontend/node_modules/.vite-temp/vite.config.ts.timestamp-1795429264293-641a7348cb7e48.mjs:830:8)
+    at PluginContextImpl.handler (file:///app/repo/frontend/node_modules/.pnpm/vite@8.3.6_@types+node@26.6.6_esbuild@0.28.2_jiti@2.7.0_tsx@4.23.15_yaml@2.9.1/node_modules/vite/dist/node/chunks/node.js:35023:13)
+    at plugin (file:///app/repo/frontend/node_modules/.pnpm/rolldown@1.2.16/node_modules/rolldown/dist/shared/bindingify-input-options-CM8bmcLg.mjs:1941:17)
+    at plugin.<computed> (file:///app/repo/frontend/node_modules/.pnpm/rolldown@1.2.16/node_modules/rolldown/dist/shared/bindingify-input-options-CM8bmcLg.mjs:2343:18) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/app/repo/frontend/dist/translations/it.json'
+}
+[translations] Build error for "ja": Error: ENOENT: no such file or directory, open '/app/repo/frontend/dist/translations/ja.json'
+    at Object.writeFileSync (node:fs:2482:20)
+    at PluginContextImpl.closeBundle (file:///app/repo/frontend/node_modules/.vite-temp/vite.config.ts.timestamp-1795429264293-641a7348cb7e48.mjs:830:8)
+    at PluginContextImpl.handler (file:///app/repo/frontend/node_modules/.pnpm/vite@8.3.6_@types+node@26.6.6_esbuild@0.28.2_jiti@2.7.0_tsx@4.23.15_yaml@2.9.1/node_modules/vite/dist/node/chunks/node.js:35023:13)
+    at plugin (file:///app/repo/frontend/node_modules/.pnpm/rolldown@1.2.16/node_modules/rolldown/dist/shared/bindingify-input-options-CM8bmcLg.mjs:1941:17)
+    at plugin.<computed> (file:///app/repo/frontend/node_modules/.pnpm/rolldown@1.2.16/node_modules/rolldown/dist/shared/bindingify-input-options-CM8bmcLg.mjs:2343:18) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/app/repo/frontend/dist/translations/ja.json'
+}
+[translations] Build error for "lv": Error: ENOENT: no such file or directory, open '/app/repo/frontend/dist/translations/lv.json'
+    at Object.writeFileSync (node:fs:2482:20)
+    at PluginContextImpl.closeBundle (file:///app/repo/frontend/node_modules/.vite-temp/vite.config.ts.timestamp-1795429264293-641a7348cb7e48.mjs:830:8)
+    at PluginContextImpl.handler (file:///app/repo/frontend/node_modules/.pnpm/vite@8.3.6_@types+node@26.6.6_esbuild@0.28.2_jiti@2.7.0_tsx@4.23.15_yaml@2.9.1/node_modules/vite/dist/node/chunks/node.js:35023:13)
+    at plugin (file:///app/repo/frontend/node_modules/.pnpm/rolldown@1.2.16/node_modules/rolldown/dist/shared/bindingify-input-options-CM8bmcLg.mjs:1941:17)
+    at plugin.<computed> (file:///app/repo/frontend/node_modules/.pnpm/rolldown@1.2.16/node_modules/rolldown/dist/shared/bindingify-input-options-CM8bmcLg.mjs:2343:18) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/app/repo/frontend/dist/translations/lv.json'
+}
+[translations] Build error for "pl": Error: ENOENT: no such file or directory, open '/app/repo/frontend/dist/translations/pl.json'
+    at Object.writeFileSync (node:fs:2482:20)
+    at PluginContextImpl.closeBundle (file:///app/repo/frontend/node_modules/.vite-temp/vite.config.ts.timestamp-1795429264293-641a7348cb7e48.mjs:830:8)
+    at PluginContextImpl.handler (file:///app/repo/frontend/node_modules/.pnpm/vite@8.3.6_@types+node@26.6.6_esbuild@0.28.2_jiti@2.7.0_tsx@4.23.15_yaml@2.9.1/node_modules/vite/dist/node/chunks/node.js:35023:13)
+    at plugin (file:///app/repo/frontend/node_modules/.pnpm/rolldown@1.2.16/node_modules/rolldown/dist/shared/bindingify-input-options-CM8bmcLg.mjs:1941:17)
+    at plugin.<computed> (file:///app/repo/frontend/node_modules/.pnpm/rolldown@1.2.16/node_modules/rolldown/dist/shared/bindingify-input-options-CM8bmcLg.mjs:2343:18) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/app/repo/frontend/dist/translations/pl.json'
+}
+[translations] Build error for "pt": Error: ENOENT: no such file or directory, open '/app/repo/frontend/dist/translations/pt.json'
+    at Object.writeFileSync (node:fs:2482:20)
+    at PluginContextImpl.closeBundle (file:///app/repo/frontend/node_modules/.vite-temp/vite.config.ts.timestamp-1795429264293-641a7348cb7e48.mjs:830:8)
+    at PluginContextImpl.handler (file:///app/repo/frontend/node_modules/.pnpm/vite@8.3.6_@types+node@26.6.6_esbuild@0.28.2_jiti@2.7.0_tsx@4.23.15_yaml@2.9.1/node_modules/vite/dist/node/chunks/node.js:35023:13)
+    at plugin (file:///app/repo/frontend/node_modules/.pnpm/rolldown@1.2.16/node_modules/rolldown/dist/shared/bindingify-input-options-CM8bmcLg.mjs:1941:17)
+    at plugin.<computed> (file:///app/repo/frontend/node_modules/.pnpm/rolldown@1.2.16/node_modules/rolldown/dist/shared/bindingify-input-options-CM8bmcLg.mjs:2343:18) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/app/repo/frontend/dist/translations/pt.json'
+}
+[translations] Build error for "ro": Error: ENOENT: no such file or directory, open '/app/repo/frontend/dist/translations/ro.json'
+    at Object.writeFileSync (node:fs:2482:20)
+    at PluginContextImpl.closeBundle (file:///app/repo/frontend/node_modules/.vite-temp/vite.config.ts.timestamp-1795429264293-641a7348cb7e48.mjs:830:8)
+    at PluginContextImpl.handler (file:///app/repo/frontend/node_modules/.pnpm/vite@8.3.6_@types+node@26.6.6_esbuild@0.28.2_jiti@2.7.0_tsx@4.23.15_yaml@2.9.1/node_modules/vite/dist/node/chunks/node.js:35023:13)
+    at plugin (file:///app/repo/frontend/node_modules/.pnpm/rolldown@1.2.16/node_modules/rolldown/dist/shared/bindingify-input-options-CM8bmcLg.mjs:1941:17)
+    at plugin.<computed> (file:///app/repo/frontend/node_modules/.pnpm/rolldown@1.2.16/node_modules/rolldown/dist/shared/bindingify-input-options-CM8bmcLg.mjs:2343:18) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/app/repo/frontend/dist/translations/ro.json'
+}
+[translations] Build error for "ru": Error: ENOENT: no such file or directory, open '/app/repo/frontend/dist/translations/ru.json'
+    at Object.writeFileSync (node:fs:2482:20)
+    at PluginContextImpl.closeBundle (file:///app/repo/frontend/node_modules/.vite-temp/vite.config.ts.timestamp-1795429264293-641a7348cb7e48.mjs:830:8)
+    at PluginContextImpl.handler (file:///app/repo/frontend/node_modules/.pnpm/vite@8.3.6_@types+node@26.6.6_esbuild@0.28.2_jiti@2.7.0_tsx@4.23.15_yaml@2.9.1/node_modules/vite/dist/node/chunks/node.js:35023:13)
+    at plugin (file:///app/repo/frontend/node_modules/.pnpm/rolldown@1.2.16/node_modules/rolldown/dist/shared/bindingify-input-options-CM8bmcLg.mjs:1941:17)
+    at plugin.<computed> (file:///app/repo/frontend/node_modules/.pnpm/rolldown@1.2.16/node_modules/rolldown/dist/shared/bindingify-input-options-CM8bmcLg.mjs:2343:18) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/app/repo/frontend/dist/translations/ru.json'
+}
+[translations] Build error for "sk": Error: ENOENT: no such file or directory, open '/app/repo/frontend/dist/translations/sk.json'
+    at Object.writeFileSync (node:fs:2482:20)
+    at PluginContextImpl.closeBundle (file:///app/repo/frontend/node_modules/.vite-temp/vite.config.ts.timestamp-1795429264293-641a7348cb7e48.mjs:830:8)
+    at PluginContextImpl.handler (file:///app/repo/frontend/node_modules/.pnpm/vite@8.3.6_@types+node@26.6.6_esbuild@0.28.2_jiti@2.7.0_tsx@4.23.15_yaml@2.9.1/node_modules/vite/dist/node/chunks/node.js:35023:13)
+    at plugin (file:///app/repo/frontend/node_modules/.pnpm/rolldown@1.2.16/node_modules/rolldown/dist/shared/bindingify-input-options-CM8bmcLg.mjs:1941:17)
+    at plugin.<computed> (file:///app/repo/frontend/node_modules/.pnpm/rolldown@1.2.16/node_modules/rolldown/dist/shared/bindingify-input-options-CM8bmcLg.mjs:2343:18) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/app/repo/frontend/dist/translations/sk.json'
+}
+[translations] Build error for "sv": Error: ENOENT: no such file or directory, open '/app/repo/frontend/dist/translations/sv.json'
+    at Object.writeFileSync (node:fs:2482:20)
+    at PluginContextImpl.closeBundle (file:///app/repo/frontend/node_modules/.vite-temp/vite.config.ts.timestamp-1795429264293-641a7348cb7e48.mjs:830:8)
+    at PluginContextImpl.handler (file:///app/repo/frontend/node_modules/.pnpm/vite@8.3.6_@types+node@26.6.6_esbuild@0.28.2_jiti@2.7.0_tsx@4.23.15_yaml@2.9.1/node_modules/vite/dist/node/chunks/node.js:35023:13)
+    at plugin (file:///app/repo/frontend/node_modules/.pnpm/rolldown@1.2.16/node_modules/rolldown/dist/shared/bindingify-input-options-CM8bmcLg.mjs:1941:17)
+    at plugin.<computed> (file:///app/repo/frontend/node_modules/.pnpm/rolldown@1.2.16/node_modules/rolldown/dist/shared/bindingify-input-options-CM8bmcLg.mjs:2343:18) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/app/repo/frontend/dist/translations/sv.json'
+}
+[translations] Build error for "tr": Error: ENOENT: no such file or directory, open '/app/repo/frontend/dist/translations/tr.json'
+    at Object.writeFileSync (node:fs:2482:20)
+    at PluginContextImpl.closeBundle (file:///app/repo/frontend/node_modules/.vite-temp/vite.config.ts.timestamp-1795429264293-641a7348cb7e48.mjs:830:8)
+    at PluginContextImpl.handler (file:///app/repo/frontend/node_modules/.pnpm/vite@8.3.6_@types+node@26.6.6_esbuild@0.28.2_jiti@2.7.0_tsx@4.23.15_yaml@2.9.1/node_modules/vite/dist/node/chunks/node.js:35023:13)
+    at plugin (file:///app/repo/frontend/node_modules/.pnpm/rolldown@1.2.16/node_modules/rolldown/dist/shared/bindingify-input-options-CM8bmcLg.mjs:1941:17)
+    at plugin.<computed> (file:///app/repo/frontend/node_modules/.pnpm/rolldown@1.2.16/node_modules/rolldown/dist/shared/bindingify-input-options-CM8bmcLg.mjs:2343:18) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/app/repo/frontend/dist/translations/tr.json'
+}
+[translations] Build error for "vi": Error: ENOENT: no such file or directory, open '/app/repo/frontend/dist/translations/vi.json'
+    at Object.writeFileSync (node:fs:2482:20)
+    at PluginContextImpl.closeBundle (file:///app/repo/frontend/node_modules/.vite-temp/vite.config.ts.timestamp-1795429264293-641a7348cb7e48.mjs:830:8)
+    at PluginContextImpl.handler (file:///app/repo/frontend/node_modules/.pnpm/vite@8.3.6_@types+node@26.6.6_esbuild@0.28.2_jiti@2.7.0_tsx@4.23.15_yaml@2.9.1/node_modules/vite/dist/node/chunks/node.js:35023:13)
+    at plugin (file:///app/repo/frontend/node_modules/.pnpm/rolldown@1.2.16/node_modules/rolldown/dist/shared/bindingify-input-options-CM8bmcLg.mjs:1941:17)
+    at plugin.<computed> (file:///app/repo/frontend/node_modules/.pnpm/rolldown@1.2.16/node_modules/rolldown/dist/shared/bindingify-input-options-CM8bmcLg.mjs:2343:18) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/app/repo/frontend/dist/translations/vi.json'
+}
+[translations] Build error for "zh": Error: ENOENT: no such file or directory, open '/app/repo/frontend/dist/translations/zh.json'
+    at Object.writeFileSync (node:fs:2482:20)
+    at PluginContextImpl.closeBundle (file:///app/repo/frontend/node_modules/.vite-temp/vite.config.ts.timestamp-1795429264293-641a7348cb7e48.mjs:830:8)
+    at PluginContextImpl.handler (file:///app/repo/frontend/node_modules/.pnpm/vite@8.3.6_@types+node@26.6.6_esbuild@0.28.2_jiti@2.7.0_tsx@4.23.15_yaml@2.9.1/node_modules/vite/dist/node/chunks/node.js:35023:13)
+    at plugin (file:///app/repo/frontend/node_modules/.pnpm/rolldown@1.2.16/node_modules/rolldown/dist/shared/bindingify-input-options-CM8bmcLg.mjs:1941:17)
+    at plugin.<computed> (file:///app/repo/frontend/node_modules/.pnpm/rolldown@1.2.16/node_modules/rolldown/dist/shared/bindingify-input-options-CM8bmcLg.mjs:2343:18) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/app/repo/frontend/dist/translations/zh.json'
+}
+[translations] Merged 20 languages from 3 source(s) into dist/translations/
+[translations] Source: 3862624 bytes → Minified: 0 bytes
+error during build:
+Build failed with 1 error:
+
+[plugin vite:build-html]
+Error: [boot-spinner] multiple extensions provide src/boot.html (dev_qunix_theme, io_calagopus_blush), only one may replace the boot spinner
+    at extensionBootMarkup (file:///app/repo/frontend/node_modules/.vite-temp/vite.config.ts.timestamp-1795429264293-641a7348cb7e48.mjs:202:34)
+    at PluginContextImpl.handler (file:///app/repo/frontend/node_modules/.vite-temp/vite.config.ts.timestamp-1795429264293-641a7348cb7e48.mjs:231:23)
+    at applyHtmlTransforms (file:///app/repo/frontend/node_modules/.pnpm/vite@8.3.6_@types+node@26.6.6_esbuild@0.28.2_jiti@2.7.0_tsx@4.23.15_yaml@2.9.1/node_modules/vite/dist/node/chunks/node.js:32290:26)
+    at async PluginContextImpl.generateBundle (file:///app/repo/frontend/node_modules/.pnpm/vite@8.3.6_@types+node@26.6.6_esbuild@0.28.2_jiti@2.7.0_tsx@4.23.15_yaml@2.9.1/node_modules/vite/dist/node/chunks/node.js:32078:14)
+    at async plugin (file:///app/repo/frontend/node_modules/.pnpm/rolldown@1.2.16/node_modules/rolldown/dist/shared/bindingify-input-options-CM8bmcLg.mjs:1928:3)
+    at async plugin.<computed> (file:///app/repo/frontend/node_modules/.pnpm/rolldown@1.2.16/node_modules/rolldown/dist/shared/bindingify-input-options-CM8bmcLg.mjs:2343:12)
+    at aggregateBindingErrorsIntoJsError (file:///app/repo/frontend/node_modules/.pnpm/rolldown@1.2.16/node_modules/rolldown/dist/shared/error-BJ9uQLIS.mjs:50:18)
+    at unwrapBindingResult (file:///app/repo/frontend/node_modules/.pnpm/rolldown@1.2.16/node_modules/rolldown/dist/shared/error-BJ9uQLIS.mjs:20:128)
+    at #build (file:///app/repo/frontend/node_modules/.pnpm/rolldown@1.2.16/node_modules/rolldown/dist/shared/rolldown-DWd2aEL4.mjs:146:34)
+    at async buildEnvironment (file:///app/repo/frontend/node_modules/.pnpm/vite@8.3.6_@types+node@26.6.6_esbuild@0.28.2_jiti@2.7.0_tsx@4.23.15_yaml@2.9.1/node_modules/vite/dist/node/chunks/node.js:34764:66)
+    at async Object.build (file:///app/repo/frontend/node_modules/.pnpm/vite@8.3.6_@types+node@26.6.6_esbuild@0.28.2_jiti@2.7.0_tsx@4.23.15_yaml@2.9.1/node_modules/vite/dist/node/chunks/node.js:35185:19)
+    at async Object.buildApp (file:///app/repo/frontend/node_modules/.pnpm/vite@8.3.6_@types+node@26.6.6_esbuild@0.28.2_jiti@2.7.0_tsx@4.23.15_yaml@2.9.1/node_modules/vite/dist/node/chunks/node.js:35182:153)
+    at async CAC.<anonymous> (file:///app/repo/frontend/node_modules/.pnpm/vite@8.3.6_@types+node@26.6.6_esbuild@0.28.2_jiti@2.7.0_tsx@4.23.15_yaml@2.9.1/node_modules/vite/dist/node/cli.js:789:3) {
+  errors: [Getter/Setter]
+}
+[ELIFECYCLE] Command failed with exit code 1.
+[ELIFECYCLE] Command failed with exit code 1.
+pnpm build:fast did not run successfully, aborting process

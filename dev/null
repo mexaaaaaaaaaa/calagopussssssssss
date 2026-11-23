@@ -1,0 +1,7 @@
+import {
+  createTheme,
+  type CSSVariablesResolver,
+  type MantineColorsTuple,
+  type MantineThemeOverride,
+} from '@mantine/core';
+import { BLUSH_PALETTE_SCALE, blushTokens } from './theme/tokens' /* will fix relative import */;

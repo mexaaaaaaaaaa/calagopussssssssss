@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360">
+  <defs>
+    <linearGradient id="bg-game-factorio" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#241D15"/>
+      <stop offset="100%" stop-color="#544029"/>
+    </linearGradient>
+    <radialGradient id="glow-game-factorio" cx="50%" cy="42%" r="55%">
+      <stop offset="0%" stop-color="#F7D286" stop-opacity="0.32"/>
+      <stop offset="100%" stop-color="#241D15" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid-game-factorio" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#ffffff" stroke-opacity="0.04" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="640" height="360" fill="url(#bg-game-factorio)"/>
+  <rect width="640" height="360" fill="url(#grid-game-factorio)"/>
+  <rect width="640" height="360" fill="url(#glow-game-factorio)"/>
+  
+        <circle cx="265" cy="180" r="62" fill="none" stroke="#F2AE49" stroke-width="14" stroke-dasharray="18 12"/>
+        <circle cx="265" cy="180" r="24" fill="#F7D286"/>
+        <circle cx="395" cy="180" r="46" fill="none" stroke="#F7D286" stroke-width="12" stroke-dasharray="14 10"/>
+        <circle cx="395" cy="180" r="16" fill="#F2AE49"/>
+</svg>

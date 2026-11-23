@@ -1,0 +1,6 @@
+{
+  "name": "Calagopus Blush Theme Foundation",
+  "description": "Minimal baby-pink Calagopus extension theme foundation and reusable Mantine + Tailwind UI design system.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

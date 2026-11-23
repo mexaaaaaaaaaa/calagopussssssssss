@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360">
+  <defs>
+    <linearGradient id="bg-mc-spigot" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2D1F12"/>
+      <stop offset="100%" stop-color="#6B4926"/>
+    </linearGradient>
+    <radialGradient id="glow-mc-spigot" cx="50%" cy="42%" r="55%">
+      <stop offset="0%" stop-color="#F7D394" stop-opacity="0.32"/>
+      <stop offset="100%" stop-color="#2D1F12" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid-mc-spigot" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#ffffff" stroke-opacity="0.04" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="640" height="360" fill="url(#bg-mc-spigot)"/>
+  <rect width="640" height="360" fill="url(#grid-mc-spigot)"/>
+  <rect width="640" height="360" fill="url(#glow-mc-spigot)"/>
+  
+        <path d="M210 130 H430 L405 182 H355 V225 H415 V262 H225 V225 H285 V182 H235 Z" fill="#F2B459" fill-opacity="0.82" stroke="#F7D394" stroke-width="2.5"/>
+        <circle cx="468" cy="112" r="14" fill="#F7D394" fill-opacity="0.85"/>
+        <circle cx="176" cy="108" r="10" fill="#F2B459" fill-opacity="0.6"/>
+</svg>
